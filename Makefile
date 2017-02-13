@@ -2,7 +2,7 @@
 regle_a:
 	gcc -c main.c
 regle_b:
-	gcc main.o -L. -lft
+	gcc main.o -L/home/nay/taff/Fonctions/ -lft
 regle_c:
 	./a.out map_30_30_10
 clean:

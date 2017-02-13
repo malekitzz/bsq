@@ -30,9 +30,7 @@ char **creaMap(char *filename, int taille)
 {
 	char **map;
 	char premiereligne[6] = {0};
-	int i;
-	int j;
-	int fd;
+	int i, j, fd;
 	
 	fd = open(filename, O_RDONLY);
 
@@ -46,18 +44,7 @@ char **creaMap(char *filename, int taille)
 		read(fd, &premiereligne[i], 1);
 		i++;
 	}
-/*
-	ft_putchar('\n');
-	ft_putchar('\n');
-	i = 0;
-	while(i < 6){
-		ft_putchar(premiereligne[i]);
-		i++;
-	}
 
-	ft_putchar('\n');
-	ft_putchar('\n');
-*/
 	map = (char **)malloc(sizeof(char *) * taille);
 	i = 0;
 	while(i < taille){
@@ -68,19 +55,6 @@ char **creaMap(char *filename, int taille)
 	}
 
 	close(fd);
-/*	
-	i = 0;
-	while(i < taille){
-		j = 0;
-		while(j < taille){
-			ft_putchar(map[i][j]);	
-			j++;
-		}
-	ft_putchar('\n');
-	i++;
-	}
-*/
-
 	return(map);
 }
 void readpoints(char *ligne, int taille)
@@ -102,21 +76,8 @@ void recursivecalcul(char *filename)
 	int count = 0;	
 	i = 0;
 	j = 0;
-	while(j < 30){
-		coucou[i][j] = readpoints(i, 30);
-	}
 
-
-	i = 0;
-	while(i < 30){
-		j = 0;
-		while(j < 30){
-			ft_putchar(coucou[i][j]);	
-			j++;
-		}
-	ft_putchar('\n');
-	i++;
-	}
+//	affichetabdouble(coucou, 30);
 
 	
 }
